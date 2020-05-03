@@ -1,0 +1,53 @@
+2020-03-22 14:47:48.222  INFO 3731 --- [main] com.lgc.demo1.Demo1Application           : Starting Demo1Application v0.0.1-SNAPSHOT on localhost with PID 3731 (/root/app/demo1/target/demo1-0.0.1-SNAPSHOT.jar started by root in /root/app/demo1)
+2020-03-22 14:47:48.236  INFO 3731 --- [main] com.lgc.demo1.Demo1Application           : The following profiles are active: production
+2020-03-22 14:47:52.206  INFO 3731 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-03-22 14:47:52.248  INFO 3731 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-22 14:47:52.248  INFO 3731 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-22 14:47:52.445  INFO 3731 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-22 14:47:52.445  INFO 3731 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4076 ms
+2020-03-22 14:47:55.609  INFO 3731 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 14:47:55.872  INFO 3731 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-22 14:47:56.464  INFO 3731 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-03-22 14:47:56.477  INFO 3731 --- [main] com.lgc.demo1.Demo1Application           : Started Demo1Application in 9.489 seconds (JVM running for 10.842)
+2020-03-22 14:48:04.157  INFO 3731 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 14:48:04.157  INFO 3731 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-22 14:48:04.186  INFO 3731 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 29 ms
+2020-03-22 14:48:04.468  INFO 3731 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-22 14:48:05.046  INFO 3731 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-22 14:51:32.882  INFO 3731 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 14:51:32.883  INFO 3731 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-22 14:51:32.897  INFO 3731 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-22 15:10:22.359  INFO 4297 --- [main] com.lgc.demo1.Demo1Application           : Starting Demo1Application v0.0.1-SNAPSHOT on localhost with PID 4297 (/root/app/demo1/target/demo1-0.0.1-SNAPSHOT.jar started by root in /root/app/demo1)
+2020-03-22 15:10:22.364  INFO 4297 --- [main] com.lgc.demo1.Demo1Application           : The following profiles are active: production
+2020-03-22 15:10:26.127  INFO 4297 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-03-22 15:10:26.165  INFO 4297 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-22 15:10:26.166  INFO 4297 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-22 15:10:26.313  INFO 4297 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-22 15:10:26.337  INFO 4297 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3801 ms
+2020-03-22 15:10:29.583  INFO 4297 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 15:10:29.823  INFO 4297 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-22 15:10:30.385  INFO 4297 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-03-22 15:10:30.403  INFO 4297 --- [main] com.lgc.demo1.Demo1Application           : Started Demo1Application in 9.209 seconds (JVM running for 10.553)
+2020-03-22 15:10:57.336  INFO 4297 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 15:10:57.336  INFO 4297 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-22 15:10:57.365  INFO 4297 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 29 ms
+2020-03-22 15:13:30.855  INFO 4297 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 16:52:45.262  INFO 5337 --- [main] com.lgc.demo1.Demo1Application           : Starting Demo1Application v0.0.1-SNAPSHOT on localhost with PID 5337 (/root/app/demo1/target/demo1-0.0.1-SNAPSHOT.jar started by root in /root/app/demo1)
+2020-03-22 16:52:45.280  INFO 5337 --- [main] com.lgc.demo1.Demo1Application           : The following profiles are active: production
+2020-03-22 16:52:49.254  INFO 5337 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-03-22 16:52:49.294  INFO 5337 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-22 16:52:49.295  INFO 5337 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-22 16:52:49.480  INFO 5337 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-22 16:52:49.481  INFO 5337 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4044 ms
+2020-03-22 16:52:52.491  INFO 5337 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 16:52:52.774  INFO 5337 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-22 16:52:53.237  INFO 5337 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-03-22 16:52:53.241  INFO 5337 --- [main] com.lgc.demo1.Demo1Application           : Started Demo1Application in 9.322 seconds (JVM running for 10.673)
+2020-03-22 16:52:55.665  INFO 5337 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 16:52:55.666  INFO 5337 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-22 16:52:55.694  INFO 5337 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2020-03-22 16:52:55.971  INFO 5337 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-22 16:52:56.748  INFO 5337 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-22 17:22:32.727  INFO 5337 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 17:22:32.729  INFO 5337 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-22 17:22:32.741  INFO 5337 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

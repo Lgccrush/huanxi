@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <!--    <link rel="stylesheet" href="styles/login.css"/>-->
+    <!--    <script type="application/javascript" src="/scripts/jquery.min.js"></script>-->
+    <!--    <script type="application/javascript" src="/scripts/baseValue.js"></script>-->
+    <!--    <script type="application/javascript" src="/scripts/cookie_util.js"></script>-->
+    <!--    <script type="application/javascript" src="/scripts/login.js"></script>-->
+    <link rel="icon" href="/images/logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/login.css"/>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!--    <script src="js/bootstrap.min.js" type="application/javascript"></script>-->
+    <script src="js/baseValue.js" type="application/javascript"></script>
+    <script src="js/cookie_util.js" type="application/javascript"></script>
+    <script src="js/login.js" type="application/javascript"></script>
+    <script type="text/javascript">
+        //	主处理
+        $(function () {//加载完body就执行此函数
+            //登录功能事件绑定
+            $("#login").click(userLogin);
+            //注册功能事件绑定
+            $("#regist_button").click(regist);
+        });
+    </script>
+</head>
+<body>
+<div class="global">
+    <div class="log log_in" tabindex='-1' id='dl'>
+        <dl>
+            <dt>
+                <div class='header'>
+                    <h3>登&nbsp;录</h3>
+                </div>
+            </dt>
+            <dt></dt>
+            <dt>
+                <div class='letter'>
+                    用户名:&nbsp;<input type="text" name="" id="count" tabindex='1'/>
+                    <span id="count_span"></span>
+                </div>
+            </dt>
+            <dt>
+                <div class='letter'>
+                    密&nbsp;&nbsp;&nbsp;码:&nbsp;<input type="password" name="" id="password" tabindex='2'/>
+                    <span id="password_span"></span>
+                </div>
+<!--            </dt>-->
+<!--            <dt>-->
+<!--                <div>-->
+<!--&lt;!&ndash;                    <a href="@{https://github.com/login/oauth/authorize(client_id='e8d6d0fe4aec2dbb6613',redirect_uri=${#httpServletRequest.getServletContext().getAttribute('redirectUri')},scope='user',state=1)}" style="display: block; text-align: center;">GitHub登录</a>&ndash;&gt;-->
+<!--                    <a th:href="@{https://github.com/login/oauth/authorize(client_id='e8d6d0fe4aec2dbb6613',redirect_uri=${#httpServletRequest.getRequestURL()+'callback'},scope='user',state=1)}" style="display: block; text-align: center;">GitHub登录</a>-->
+<!--&lt;!&ndash;                    <a th:href="@{https://github.com/login/oauth/authorize(client_id='69e311bad26e3f579725',redirect_uri=${#httpServletRequest.getRequestURL()+'callback'},scope='user',state=1)}">登录</a>&ndash;&gt;-->
+
+
+<!--                </div>-->
+<!--            </dt>-->
+            <dt>
+                <div>
+                    <input type="button" name="" id="login" value='&nbsp登&nbsp录&nbsp' tabindex='3'/>
+                    <input type="button" name="" id="sig_in" value='&nbsp注&nbsp册&nbsp' tabindex='4'/>
+                </div>
+            </dt>
+        </dl>
+    </div>
+    <div class="sig sig_out" tabindex='-1' id='zc' style='visibility:hidden;'>
+        <dl>
+            <dt>
+                <div class='header'>
+                    <h3>注&nbsp;册</h3>
+                </div>
+            </dt>
+            <dt></dt>
+            <dt>
+                <div class='letter'>
+                    用户名:&nbsp;<input type="text" name="" id="regist_username" tabindex='5'/>
+                    <div class='warning' id='warning_1'><span>该用户名不可用</span></div>
+                </div>
+            </dt>
+<!--            <dt>-->
+<!--                <div class='letter'>-->
+<!--                    昵&nbsp;&nbsp;&nbsp;称:&nbsp;<input type="text" name="" id="nickname" tabindex='6'/>-->
+<!--                </div>-->
+<!--            </dt>-->
+            <dt>
+                <div class='letter'>
+                    密&nbsp;&nbsp;&nbsp;码:&nbsp;<input type="password" name="" id="regist_password" tabindex='7'/>
+                    <div class='warning' id='warning_2'><span>密码长度过短</span></div>
+                </div>
+            </dt>
+            <dt>
+                <div class='password'>
+                    &nbsp;&nbsp;&nbsp;确认密码:&nbsp;<input type="password" name="" id="final_password" tabindex='8'/>
+                    <div class='warning' id='warning_3'><span>密码输入不一致</span></div>
+                </div>
+            </dt>
+            <dt>
+                <div>
+                    <input type="button" name="" id="regist_button" value='&nbsp注&nbsp册&nbsp' tabindex='9'/>
+                    <input type="button" name="" id="back" value='&nbsp返&nbsp回&nbsp' tabindex='10'/>
+                    <script type="text/javascript">
+                        function get(e) {
+                            return document.getElementById(e);
+                        }
+
+                        get('sig_in').onclick = function () {
+                            get('dl').className = 'log log_out';
+                            get('zc').className = 'sig sig_in';
+                        }
+                        get('back').onclick = function () {
+                            get('zc').className = 'sig sig_out';
+                            get('dl').className = 'log log_in';
+                        }
+                        window.onload = function () {
+                            var t = setTimeout("get('zc').style.visibility='visible'", 800);
+                            get('final_password').onblur = function () {
+                                var npassword = get('regist_password').value;
+                                var fpassword = get('final_password').value;
+                                if (npassword != fpassword) {
+                                    get('warning_3').style.display = 'block';
+                                }
+                            }
+                            get('regist_password').onblur = function () {
+                                var npassword = get('regist_password').value.length;
+                                if (npassword < 6 && npassword > 0) {
+                                    get('warning_2').style.display = 'block';
+                                }
+                            }
+                            get('regist_password').onfocus = function () {
+                                get('warning_2').style.display = 'none';
+                            }
+                            get('final_password').onfocus = function () {
+                                get('warning_3').style.display = 'none';
+                            }
+                        }
+                    </script>
+                </div>
+            </dt>
+        </dl>
+    </div>
+</div>
+</body>
+</html>
